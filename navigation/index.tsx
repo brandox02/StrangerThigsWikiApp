@@ -21,6 +21,7 @@ import NotFoundScreen from "../screens/NotFoundScreen";
 import TabPortraitScreen from "../screens/TabPortraitScreen";
 import TabCharactersScreen from "../screens/TabCharactersScreen";
 import TabMomentsScreen from "../screens/TabMomentsScreen";
+import TabAboutItScreen from "../screens/TabAboutItScreen";
 
 import {
   RootStackParamList,
@@ -29,6 +30,8 @@ import {
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 import { View, Text } from "../components/Themed";
+import TabMyLifeScreen from "../screens/TabMyLifeScreen";
+import TabContactScreen from "../screens/TabContactScreen";
 
 export default function Navigation({
   colorScheme,
@@ -101,7 +104,7 @@ function BottomTabNavigator() {
         options={({ navigation }: RootTabScreenProps<"portrait">) => ({
           title: "Portada",
 
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         })}
       />
       <BottomTab.Screen
@@ -109,7 +112,7 @@ function BottomTabNavigator() {
         component={TabCharactersScreen}
         options={({ navigation }: RootTabScreenProps<"characters">) => ({
           title: "Personajes",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="users" color={color} />,
         })}
       />
       <BottomTab.Screen
@@ -117,7 +120,33 @@ function BottomTabNavigator() {
         component={TabMomentsScreen}
         options={({ navigation }: RootTabScreenProps<"moments">) => ({
           title: "Momentos",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="image" color={color} />,
+        })}
+      />
+      <BottomTab.Screen
+        name="aboutIt"
+        component={TabAboutItScreen}
+        options={({ navigation }: RootTabScreenProps<"aboutIt">) => ({
+          title: "Acerca De",
+          tabBarIcon: ({ color }) => <TabBarIcon name="info" color={color} />,
+        })}
+      />
+      <BottomTab.Screen
+        name="myLife"
+        component={TabMyLifeScreen}
+        options={({ navigation }: RootTabScreenProps<"myLife">) => ({
+          title: "En Mi Vida",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="history" color={color} />
+          ),
+        })}
+      />
+      <BottomTab.Screen
+        name="contact"
+        component={TabContactScreen}
+        options={({ navigation }: RootTabScreenProps<"contact">) => ({
+          title: "Contratame",
+          tabBarIcon: ({ color }) => <TabBarIcon name="github" color={color} />,
         })}
       />
     </BottomTab.Navigator>

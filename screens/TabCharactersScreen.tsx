@@ -22,7 +22,7 @@ const Character = ({ description, image, name }: IList) => {
         style={{ alignSelf: "center", width: 150, height: 150, margin: 30 }}
         source={image}
       />
-      <Text style={{ marginLeft: -30, width: "100%" }}>{description}</Text>
+      <Text style={{ marginLeft: -30, width: "100%", marginBottom: 30 }}>{description}</Text>
     </List.Accordion>
   );
 };
