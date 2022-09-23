@@ -27,7 +27,9 @@
         "foregroundImage": "./assets/images/transparent-real-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.brandox02.stranger_things_wiki"
+      "versionCode": 2,
+      "package": "com.brandox02.stranger_things_wiki",
+      "blockedPermissions": ["android.permission.ACCESS_BACKGROUND_LOCATION"]
     },
     "web": {
       "favicon": "./assets/images/transparent-real-icon.png"
